@@ -2,24 +2,24 @@
 
 > Version: 0.1.0  
 > Status: Draft  
-> Product codename: Project D  
+> Product: Fluvra  
 > Last updated: 2026-09-01
 
 ---
 
 # 1. Product Overview
 
-Project D 是一个面向 Windows 和 macOS 的现代媒体下载应用。
+Fluvra 是一个面向 Windows 和 macOS 的现代媒体下载应用。
 
 它的目标不是成为 yt-dlp 的图形界面，也不是向用户暴露大量命令行参数，而是把链接解析、媒体选择、下载管理、字幕、音轨、后处理、历史记录和站点兼容性封装成一个简单、可靠的桌面产品。
 
 用户应该能够完成：
 
-> 发现一个视频 → 将链接交给 Project D → 得到自己想要的文件。
+> 发现一个视频 → 将链接交给 Fluvra → 得到自己想要的文件。
 
 底层具体使用什么解析器、下载器、媒体处理工具，不应成为普通用户需要理解的内容。
 
-Project D 可以由 yt-dlp、FFmpeg、FFprobe、JavaScript Runtime 等成熟开源组件驱动，但这些组件属于实现细节，而不是产品本身。
+Fluvra 可以由 yt-dlp、FFmpeg、FFprobe、JavaScript Runtime 等成熟开源组件驱动，但这些组件属于实现细节，而不是产品本身。
 
 ---
 
@@ -27,7 +27,7 @@ Project D 可以由 yt-dlp、FFmpeg、FFprobe、JavaScript Runtime 等成熟开�
 
 ## 2.1 Product Definition
 
-Project D 是：
+Fluvra 是：
 
 > **A modern media downloader for Windows and macOS.**
 
@@ -43,9 +43,9 @@ Project D 是：
 
 ---
 
-## 2.2 What Project D Is Not
+## 2.2 What Fluvra Is Not
 
-Project D 不是：
+Fluvra 不是：
 
 - yt-dlp 参数生成器
 - FFmpeg GUI
@@ -57,7 +57,7 @@ Project D 不是：
 - 视频内容聚合平台
 - 云端视频下载服务
 
-Project D 的核心始终是：
+Fluvra 的核心始终是：
 
 > **把用户有权访问的网络媒体可靠地保存为本地文件。**
 
@@ -65,7 +65,7 @@ Project D 的核心始终是：
 
 # 3. Product Vision
 
-Project D 的长期目标是达到甚至超过 Downie 一类成熟商业下载器的日常体验，同时提供：
+Fluvra 的长期目标是达到甚至超过 Downie 一类成熟商业下载器的日常体验，同时提供：
 
 - Windows + macOS 跨平台支持
 - 更强的下载历史与本地媒体库
@@ -87,13 +87,13 @@ Project D 的长期目标是达到甚至超过 Downie 一类成熟商业下载�
 
 用户只需要知道：
 
-> Project D 可以把这个媒体正确下载下来。
+> Fluvra 可以把这个媒体正确下载下来。
 
 ---
 
 # 4. Product Principles
 
-Project D 的所有产品与工程决策都应遵守以下原则。
+Fluvra 的所有产品与工程决策都应遵守以下原则。
 
 ## 4.1 Hide Implementation Complexity
 
@@ -162,7 +162,7 @@ Project D 的所有产品与工程决策都应遵守以下原则。
 
 ## 4.4 Explain Failures
 
-Project D 不应该直接把底层工具错误原样交给普通用户。
+Fluvra 不应该直接把底层工具错误原样交给普通用户。
 
 例如不应该只显示：
 
@@ -194,7 +194,7 @@ Project D 不应该直接把底层工具错误原样交给普通用户。
 
 必须允许独立更新。
 
-一个网站发生变化，不应该强制 Project D 发布完整的新桌面应用版本才能恢复下载。
+一个网站发生变化，不应该强制 Fluvra 发布完整的新桌面应用版本才能恢复下载。
 
 ---
 
@@ -214,7 +214,7 @@ Project D 不应该直接把底层工具错误原样交给普通用户。
 
 ## 4.7 DRM Is Out of Scope
 
-Project D 不以绕过 DRM 为目标。
+Fluvra 不以绕过 DRM 为目标。
 
 明确不将以下能力作为产品功能：
 
@@ -223,7 +223,7 @@ Project D 不以绕过 DRM 为目标。
 - DRM key 提取
 - 付费内容保护绕过
 
-Project D 只处理用户能够正常访问并且不存在受保护 DRM 限制的媒体内容。
+Fluvra 只处理用户能够正常访问并且不存在受保护 DRM 限制的媒体内容。
 
 ---
 
@@ -301,14 +301,14 @@ Initial target:
 
 用户复制一个视频地址。
 
-打开 Project D。
+打开 Fluvra。
 
 按：
 
 - `Ctrl + V`
 - `Command + V`
 
-Project D：
+Fluvra：
 
 1. 自动读取 URL
 2. 开始解析
@@ -327,7 +327,7 @@ Project D：
 - 文本
 - 浏览器链接
 
-拖入 Project D。
+拖入 Fluvra。
 
 应用自动识别并解析。
 
@@ -349,7 +349,7 @@ Project D：
 - MKV
 - MP4
 
-Project D 自动选择。
+Fluvra 自动选择。
 
 ---
 
@@ -361,7 +361,7 @@ Project D 自动选择。
 
 > High Compatibility
 
-Project D 自动选择或者转换成合理的：
+Fluvra 自动选择或者转换成合理的：
 
 - MP4
 - H.264
@@ -392,7 +392,7 @@ Project D 自动选择或者转换成合理的：
 
 当 URL 包含 Playlist 时：
 
-Project D 应识别 Playlist，并允许：
+Fluvra 应识别 Playlist，并允许：
 
 - 下载全部
 - 选择部分
@@ -404,7 +404,7 @@ Project D 应识别 Playlist，并允许：
 
 如果存在字幕：
 
-Project D 应显示：
+Fluvra 应显示：
 
 - 字幕语言
 - 自动字幕与人工字幕的差异
@@ -417,7 +417,7 @@ Project D 应显示：
 
 如果用户再次添加已经下载过的媒体：
 
-Project D 应提醒：
+Fluvra 应提醒：
 
 > This media was downloaded before.
 
@@ -434,7 +434,7 @@ Project D 应提醒：
 
 下载失败时：
 
-Project D 应：
+Fluvra 应：
 
 1. 分类错误
 2. 显示用户可理解的原因
@@ -460,7 +460,7 @@ Project D 应：
 
 # 8. Main Navigation
 
-Project D 默认只提供四个一级页面：
+Fluvra 默认只提供四个一级页面：
 
 - Home
 - Downloads
@@ -617,7 +617,7 @@ Library 应支持：
 
 # 12. Presets
 
-Project D 不应要求普通用户配置底层格式规则。
+Fluvra 不应要求普通用户配置底层格式规则。
 
 提供以下默认 Preset：
 
@@ -704,7 +704,7 @@ Project D 不应要求普通用户配置底层格式规则。
 
 # 13. Download Queue
 
-Project D 必须提供真正的下载队列。
+Fluvra 必须提供真正的下载队列。
 
 队列需要支持：
 
@@ -722,7 +722,7 @@ Project D 必须提供真正的下载队列。
 
 # 14. Media Processing
 
-下载后的媒体处理属于 Project D 的核心能力。
+下载后的媒体处理属于 Fluvra 的核心能力。
 
 用户不应该需要另一个转换软件完成常见操作。
 
@@ -737,7 +737,7 @@ Project D 必须提供真正的下载队列。
 - Chapters
 - Format conversion
 
-高级视频编辑不属于 Project D 的核心范围。
+高级视频编辑不属于 Fluvra 的核心范围。
 
 例如不优先提供：
 
@@ -781,7 +781,7 @@ Project D 必须提供真正的下载队列。
 
 # 16. Diagnostics
 
-Project D 应内置 Diagnostics 页面。
+Fluvra 应内置 Diagnostics 页面。
 
 至少检查：
 
@@ -809,7 +809,7 @@ Project D 应内置 Diagnostics 页面。
 
 # 17. Dependency Management
 
-Project D 自己管理必要运行组件。
+Fluvra 自己管理必要运行组件。
 
 普通用户不应被要求：
 
@@ -819,7 +819,7 @@ Project D 自己管理必要运行组件。
 - 手动安装 FFmpeg
 - 手动安装 yt-dlp
 
-依赖应由 Project D：
+依赖应由 Fluvra：
 
 - 安装
 - 验证
@@ -833,7 +833,7 @@ Project D 自己管理必要运行组件。
 
 # 18. Updates
 
-Project D 至少区分以下更新渠道：
+Fluvra 至少区分以下更新渠道：
 
 ## Application
 
@@ -883,7 +883,7 @@ Browser Extension 属于 Phase 2。
 
 - Download Video
 - Download Audio
-- Open in Project D
+- Open in Fluvra
 
 浏览器扩展不应该包含主要下载逻辑。
 
@@ -925,7 +925,7 @@ Smart Capture 属于 Phase 3。
 
 当普通 Resolver 无法解析媒体时：
 
-Project D 可以提供：
+Fluvra 可以提供：
 
 > Open in Smart Capture
 
@@ -949,7 +949,7 @@ Smart Capture 不应该成为普通下载流程的默认步骤。
 
 # 22. Integrations
 
-Project D 后期支持网站 Integration。
+Fluvra 后期支持网站 Integration。
 
 目标：
 
@@ -979,7 +979,7 @@ Project D 后期支持网站 Integration。
 
 # 23. Privacy
 
-Project D 应尽可能 Local First。
+Fluvra 应尽可能 Local First。
 
 默认情况下：
 
@@ -987,7 +987,7 @@ Project D 应尽可能 Local First。
 - 用户 URL 不上传
 - Cookies 不上传
 - 浏览历史不上传
-- 媒体内容不经过 Project D 自有服务器
+- 媒体内容不经过 Fluvra 自有服务器
 
 如果未来增加：
 
@@ -1198,7 +1198,7 @@ v0.1 不实现：
 - Top Downloads
 - Social Features
 - Accounts
-- Project D Cloud
+- Fluvra Cloud
 - DRM bypass
 
 ---
@@ -1279,7 +1279,7 @@ Phase 4 的具体功能必须根据真实用户需求决定，不提前承诺全
 
 # 32. Success Criteria
 
-Project D 不以“支持多少参数”衡量成功。
+Fluvra 不以“支持多少参数”衡量成功。
 
 核心指标应该是：
 
@@ -1388,7 +1388,7 @@ Windows 和 macOS 都应该被视为一等公民。
 
 # 34. Non-Goals
 
-Project D 不追求：
+Fluvra 不追求：
 
 - 最多设置项
 - 最多 yt-dlp 参数
@@ -1399,7 +1399,7 @@ Project D 不追求：
 - 复制 Downie 的所有功能
 - 完全复制某一个现有产品的 UI
 
-Project D 追求：
+Fluvra 追求：
 
 > 用最少的用户决策，可靠得到正确的媒体文件。
 
@@ -1407,7 +1407,7 @@ Project D 追求：
 
 # 35. Long-Term Product Identity
 
-Project D 的最终身份应该是：
+Fluvra 的最终身份应该是：
 
 > 一个独立的媒体下载产品。
 
@@ -1415,7 +1415,7 @@ Project D 的最终身份应该是：
 
 > 一个带 GUI 的 yt-dlp。
 
-因此，未来 README 的主标题应该描述 Project D 自己。
+因此，未来 README 的主标题应该描述 Fluvra 自己。
 
 例如：
 
@@ -1429,7 +1429,7 @@ yt-dlp、FFmpeg 和其他依赖可以在技术说明与 Credits 中明确注明�
 
 它们负责提供能力。
 
-Project D 负责提供产品。
+Fluvra 负责提供产品。
 
 ---
 
